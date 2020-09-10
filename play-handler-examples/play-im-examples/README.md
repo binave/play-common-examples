@@ -1,4 +1,4 @@
-# examples-im
+# im-examples
 
 * 通话
 

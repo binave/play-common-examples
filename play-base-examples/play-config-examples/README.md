@@ -1,4 +1,4 @@
-# examples-config
+# config-examples
 
 * 配置模块
     * 读取本地配置
