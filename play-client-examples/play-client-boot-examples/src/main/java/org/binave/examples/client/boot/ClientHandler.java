@@ -4,14 +4,13 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelOutboundInvoker;
+import lombok.extern.slf4j.Slf4j;
 import org.binave.common.collection.IndexMap;
 import org.binave.common.util.MonitorUtil;
 import org.binave.play.route.NettyUtil;
 import org.binave.play.route.api.BaseHandler;
 import org.binave.play.route.args.DataPacket;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.security.SecureRandom;
 import java.util.*;
@@ -23,9 +22,8 @@ import java.util.*;
  * @author by bin jin on 2017/5/22.
  * @since 1.8
  */
+@Slf4j
 public class ClientHandler extends ChannelInboundHandlerAdapter {
-
-    private static Logger log = LoggerFactory.getLogger(ClientHandler.class);
 
     private ChannelOutboundInvoker invoker;
 

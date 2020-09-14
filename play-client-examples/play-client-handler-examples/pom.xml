@@ -21,7 +21,13 @@
             <artifactId>protoc-examples</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
-
+        <dependency>
+            <!-- 需要搜索 IntelliJ IDEA lombok 或 eclipse lombok 进行插件安装 -->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

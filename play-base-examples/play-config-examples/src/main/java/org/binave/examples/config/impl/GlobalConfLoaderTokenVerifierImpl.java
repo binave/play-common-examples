@@ -1,6 +1,7 @@
 
 package org.binave.examples.config.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.conf.api.TokenVerifier;
 import org.binave.examples.data.args.GlobalCount;
 import org.binave.examples.data.args.Resource;
@@ -25,8 +26,6 @@ import org.binave.play.data.cache.factory.CacheFactory;
 import org.binave.play.data.db.factory.DBConnectFactory;
 import org.binave.play.data.db.impl.TypeSqlSourceImpl;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
 
 import java.sql.SQLException;
@@ -42,9 +41,8 @@ import java.util.regex.Pattern;
  * @author by bin jin on 2017/2/26.
  */
 @Skenlr.implement
+@Slf4j
 public class GlobalConfLoaderTokenVerifierImpl implements ConfLoader, TokenVerifier {
-
-    private static Logger log = LoggerFactory.getLogger(GlobalConfLoaderTokenVerifierImpl.class);
 
     // 配置 Map
     private Map<String, List<String>> varMap = new HashMap<>();

@@ -1,5 +1,6 @@
 package org.binave.examples.data.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.config.ProtoStuffCodec;
 import org.binave.examples.data.api.DataSource;
 import org.binave.examples.data.args.Player;
@@ -12,8 +13,6 @@ import org.binave.play.data.args.Access;
 import org.binave.play.data.cache.ConsistentCachePool;
 import org.binave.play.data.cache.factory.CacheFactory;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
 
 import java.util.*;
@@ -29,9 +28,8 @@ import java.util.*;
  * @author by bin jin on 2017/3/17.
  */
 @Skenlr.implement
+@Slf4j
 public class CachePlayerSourceImpl implements PlayerSource {
-
-    private static Logger log = LoggerFactory.getLogger(CachePlayerSourceImpl.class);
 
     // 缓存池
     private static ConsistentCachePool cachePool;

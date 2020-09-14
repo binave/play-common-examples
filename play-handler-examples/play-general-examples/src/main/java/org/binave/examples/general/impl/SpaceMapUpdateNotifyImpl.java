@@ -1,6 +1,7 @@
 
 package org.binave.examples.general.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.play.config.api.ConfLoader;
 import org.binave.play.config.api.UpdateNotify;
 import org.binave.play.config.args.Config;
@@ -8,8 +9,6 @@ import org.binave.play.config.args.UpdateNotice;
 import org.binave.play.config.factory.ConfPoolFactory;
 import org.binave.play.config.util.SpaceConfMap;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 
@@ -21,9 +20,8 @@ import java.util.Collection;
  * @author by bin jin on 2017/4/7.
  */
 @Skenlr.implement
+@Slf4j
 public class SpaceMapUpdateNotifyImpl implements UpdateNotify {
-
-    private static Logger log = LoggerFactory.getLogger(SpaceMapUpdateNotifyImpl.class);
 
     private static SpaceConfMap confMap = ConfPoolFactory.createSpaceConfMap();
 

@@ -1,5 +1,6 @@
 package org.binave.examples.general.impl.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.data.args.Player;
 import org.binave.examples.general.impl.SpaceMapUpdateNotifyImpl;
 import org.binave.examples.protoc.Msg;
@@ -8,8 +9,6 @@ import org.binave.play.config.args.Config;
 import org.binave.play.config.factory.ConfPoolFactory;
 import org.binave.play.config.util.ConfTable;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.security.SecureRandom;
 import java.util.Collection;
@@ -20,9 +19,8 @@ import java.util.Random;
  * @since 1.8
  */
 @Skenlr.implement
+@Slf4j
 public class TakeChapterRewardBaseHandlerImpl extends BasePlayerHandler<Msg.C_TakeChapterReward_14016> {
-
-    private static Logger log = LoggerFactory.getLogger(TakeChapterRewardBaseHandlerImpl.class);
 
     /**
      * 引用私有变量

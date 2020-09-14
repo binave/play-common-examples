@@ -1,10 +1,9 @@
 package org.binave.examples.client.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.protoc.Msg;
 import org.binave.play.protoc.BaseProtocHandler;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * 客户端登陆发送或响应
@@ -13,9 +12,8 @@ import org.slf4j.LoggerFactory;
  * @since 1.8
  */
 @Skenlr.implement
+@Slf4j
 public class LoginServerBaseHandlerImpl extends BaseProtocHandler<Msg.S_LoginServer_10013> {
-
-    private static Logger log = LoggerFactory.getLogger(LoginServerBaseHandlerImpl.class);
 
     @Override
     public Object call(long id, int pool, Msg.S_LoginServer_10013 resp) {

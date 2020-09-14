@@ -1,5 +1,6 @@
 package org.binave.examples.route;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.route.impl.TcpLiveSenderImpl;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
@@ -11,8 +12,6 @@ import org.binave.play.route.api.BaseHandler;
 import org.binave.play.route.NettyUtil;
 import org.binave.play.route.args.DataPacket;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.xml.ws.http.HTTPException;
 import java.net.HttpURLConnection;
@@ -23,9 +22,8 @@ import java.util.Set;
  *
  * @author by bin jin on 2017/4/26.
  */
+@Slf4j
 public class MessageHandler extends ChannelInboundHandlerAdapter {
-
-    private static Logger log = LoggerFactory.getLogger(MessageHandler.class);
 
     /**
      * 所有的 handler

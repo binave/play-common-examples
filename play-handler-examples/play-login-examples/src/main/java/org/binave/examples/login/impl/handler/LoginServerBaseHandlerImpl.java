@@ -1,5 +1,6 @@
 package org.binave.examples.login.impl.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.conf.api.TokenVerifier;
 import org.binave.examples.data.args.Player;
 import org.binave.examples.protoc.Msg.*;
@@ -7,8 +8,6 @@ import org.binave.examples.protoc.impl.BasePlayerHandler;
 import org.binave.examples.route.api.MessageTag;
 import org.binave.play.route.args.DataPacket;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * 登陆
@@ -16,9 +15,8 @@ import org.slf4j.LoggerFactory;
  * @since 1.8
  */
 @Skenlr.implement
+@Slf4j
 public class LoginServerBaseHandlerImpl extends BasePlayerHandler<C_LoginServer_10012> implements MessageTag {
-
-    private static Logger log = LoggerFactory.getLogger(LoginServerBaseHandlerImpl.class);
 
     @Skenlr.inject
     private TokenVerifier tokenVerifier;

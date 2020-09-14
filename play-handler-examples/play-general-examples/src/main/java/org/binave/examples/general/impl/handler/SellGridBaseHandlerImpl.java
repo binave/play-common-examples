@@ -1,5 +1,6 @@
 package org.binave.examples.general.impl.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.conf.args.BaseItemConf;
 import org.binave.examples.data.args.Player;
 import org.binave.examples.exception.NotForSaleException;
@@ -9,8 +10,6 @@ import org.binave.play.config.args.Config;
 import org.binave.play.config.factory.ConfPoolFactory;
 import org.binave.play.config.util.ConfTable;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.security.SecureRandom;
 import java.util.Collection;
@@ -23,9 +22,8 @@ import java.util.Random;
  * @author by bin jin on 2017/4/27.
  */
 @Skenlr.implement
+@Slf4j
 public class SellGridBaseHandlerImpl extends BasePlayerHandler<C_SellGrid_12035> {
-
-    private static Logger log = LoggerFactory.getLogger(SellGridBaseHandlerImpl.class);
 
     /**
      * 引用私有变量

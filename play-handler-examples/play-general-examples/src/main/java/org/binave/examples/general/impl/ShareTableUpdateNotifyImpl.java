@@ -2,14 +2,13 @@
 package org.binave.examples.general.impl;
 
 import com.google.common.collect.HashBasedTable;
+import lombok.extern.slf4j.Slf4j;
 import org.binave.play.config.api.ConfLoader;
 import org.binave.play.config.api.UpdateNotify;
 import org.binave.play.config.args.UpdateNotice;
 import org.binave.play.config.factory.RefreshFactory;
 import org.binave.play.config.util.Refresh;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 /**
@@ -18,9 +17,8 @@ import org.slf4j.LoggerFactory;
  * @author by bin jin on 2017/2/26.
  */
 @Skenlr.implement
+@Slf4j
 public class ShareTableUpdateNotifyImpl implements UpdateNotify {
-
-    private static Logger log = LoggerFactory.getLogger(ShareTableUpdateNotifyImpl.class);
 
     /**
      * 引用私有变量

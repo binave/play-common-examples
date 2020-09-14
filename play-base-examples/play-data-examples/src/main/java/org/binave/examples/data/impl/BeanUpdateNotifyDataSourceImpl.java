@@ -1,6 +1,7 @@
 
 package org.binave.examples.data.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.data.api.DataSource;
 import org.binave.common.api.SourceBy;
 import org.binave.common.collection.IndexMap;
@@ -13,8 +14,6 @@ import org.binave.play.data.args.TypeSql;
 import org.binave.play.data.db.factory.DBConnectFactory;
 import org.binave.play.data.db.impl.TypeSqlSourceImpl;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
 import java.util.*;
@@ -27,9 +26,8 @@ import java.util.regex.Pattern;
  * @author by bin jin on 2017/4/11.
  */
 @Skenlr.implement
+@Slf4j
 public class BeanUpdateNotifyDataSourceImpl implements DataSource, UpdateNotify {
-
-    private static Logger log = LoggerFactory.getLogger(BeanUpdateNotifyDataSourceImpl.class);
 
     /**
      * 分 pool，pool 对应的连接池不由 DBConnectImpl 维护

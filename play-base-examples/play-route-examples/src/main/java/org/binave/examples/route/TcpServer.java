@@ -1,5 +1,6 @@
 package org.binave.examples.route;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.route.api.MessageTag;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -13,17 +14,14 @@ import io.netty.handler.logging.LoggingHandler;
 import org.binave.play.config.api.ConfLoader;
 import org.binave.play.route.MessageDecoder;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * 启动类
  *
  * @author by bin jin on 2017/4/26.
  */
+@Slf4j
 public class TcpServer extends Thread {
-
-    private static Logger log = LoggerFactory.getLogger(TcpServer.class);
 
     /**
      * 配置模块

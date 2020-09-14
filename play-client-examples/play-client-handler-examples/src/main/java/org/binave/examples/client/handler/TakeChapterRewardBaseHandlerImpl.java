@@ -1,19 +1,17 @@
 package org.binave.examples.client.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.protoc.Msg;
 import org.binave.play.protoc.BaseProtocHandler;
 import org.binave.play.tag.Skenlr;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author by bin jin on 2017/5/25.
  * @since 1.8
  */
 @Skenlr.implement
+@Slf4j
 public class TakeChapterRewardBaseHandlerImpl extends BaseProtocHandler<Msg.S_TakeChapterReward_14017> {
-
-    private static Logger log = LoggerFactory.getLogger(TakeChapterRewardBaseHandlerImpl.class);
 
     @Override
     public Object call(long id, int pool, Msg.S_TakeChapterReward_14017 resp) {

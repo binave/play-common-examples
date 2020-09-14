@@ -1,10 +1,9 @@
 package org.binave.examples.route;
 
+import lombok.extern.slf4j.Slf4j;
 import org.binave.examples.route.impl.TcpLiveSenderImpl;
 import io.netty.channel.Channel;
 import org.binave.play.route.NettyUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.concurrent.Callable;
@@ -15,9 +14,8 @@ import java.util.concurrent.Callable;
  * @author by bin jin on 2017/5/6.
  * @since 1.8
  */
+@Slf4j
 public class KeepLive implements Callable {
-
-    private static Logger log = LoggerFactory.getLogger(KeepLive.class);
 
     /**
      * 根据最后一次活跃时间，
